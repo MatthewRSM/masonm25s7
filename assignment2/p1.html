@@ -107,9 +107,8 @@
       <h1>Mozilla</h1>
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
-      <img src="./img/firefox_logo-only_RGB.png" alt="Firefox Logo">
+      <img src="./img/firefox_logo-only_RGB_120px.png" alt="Firefox Logo">
     </header>
-
     <main>
       <article>
         <!-- insert iframe from youtube -->
@@ -125,13 +124,31 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img src="./img/firefox_logo-only_RGB.png" alt="Firefox Logo">
+          <img 
+          src="./img/firefox_logo-only_RGB_400px.png" 
+          alt="Firefox Logo"
+          srcset="
+            ./img/firefox_logo-only_RGB_120px.png 120w,
+            ./img/firefox_logo-only_RGB_400px.png 400w"
+          sizes="(max-width: 600px) 120px, 400px">
         </a>
         <a href="https://www.mozilla.org/">
-          <img src="./img/mozilla-dinosaur-head.png" alt="Mozilla Dinosaur Head">
+          <img 
+          src="./img/mozilla-dinosaur-head_400px.png" 
+          alt="Mozilla Dinosaur Head Logo"
+          srcset="
+            ./img/mozilla-dinosaur-head_120px.png 120w,
+            ./img/mozilla-dinosaur-head_400px.png 400w"
+          sizes="(max-width: 600px) 120px, 400px">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img src="./img/firefox-addons.jpg" alt="Firefox Add-ons Logo">
+          <img 
+            src="./img/firefox-addons_400px.jpg" 
+            alt="Firefox Add-ons Logo"
+            srcset="
+              ./img/firefox-addons_120px.jpg 120w,
+              ./img/firefox-addons_400px.jpg 400w"
+            sizes="(max-width: 600px) 120px, 400px">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
           <img src="./img/mdn.svg" alt="MDN Web Docs Logo">
@@ -141,7 +158,10 @@
 
       <div class="red-panda">
         <!-- insert picture element -->
-        <img src="./img/red-panda.jpg" alt="A Red Panda">
+        <picture>
+            <source media="(max-width: 600px)" srcset="./img/red-panda_600px.jpg">
+            <img src="./img/red-panda_1200px.jpg" alt="A red panda">
+        </picture>
       </div>
 
     </main>
