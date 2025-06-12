@@ -1,0 +1,27 @@
+.parent {
+
+    display: flex;
+    flex-direction: row;
+    height: 10em;
+
+}
+
+.child {
+
+    background-color: aquamarine;
+    flex: 1;
+
+    text-align: center;
+    padding: 4em;
+    border: 2px solid black;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.child:hover {
+    background-color: darkturquoise;
+}
