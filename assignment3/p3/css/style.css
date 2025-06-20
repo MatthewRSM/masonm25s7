@@ -44,6 +44,8 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
+/* fonts */
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/montserrat/Montserrat-Thin.woff2') format('woff2'),
@@ -60,4 +62,56 @@ header, footer {
     font-weight: 300;
     font-style: normal;
     font-display: swap;
+}
+
+/* styles */ 
+
+body {
+    font-family: 'Merriweather';
+    font-size: 10px;
+}
+
+h1, h2 {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+}
+
+nav li {
+    font-size: 1.5rem;
+    /* so it's not affected by the other line-height */
+    line-height: normal;
+}
+
+p, li {
+    line-height: 1rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+section > h2 + p {
+    text-indent: 20px;
+}
+
+a:link {
+    color: #5a7184;
+}
+a:visited {
+    color: #705d66;
+}
+a:focus {
+    color: 	#b34747;
+    text-decoration: none;
+}
+a:hover {
+    color: 	#a68a55;
+    text-decoration: none;
+}
+
+a {
+    outline: none;
 }
