@@ -81,12 +81,29 @@ nav li {
     font-size: 1.5rem;
     /* so it's not affected by the other line-height */
     line-height: normal;
+    list-style-type: none;
+    text-align: center;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    border: 1px solid #a66;
+}
+
+nav li:hover {
+    border: 1px solid #a68a55;
+}
+
+nav li a {
+    text-decoration: none;
 }
 
 p, li {
     line-height: 1rem;
     letter-spacing: 0.05rem;
     word-spacing: 0.1rem;
+}
+
+ul, ol {
+    list-style-type: square;
 }
 
 h1 {
@@ -102,10 +119,10 @@ a {
 }
 
 a:link {
-    color: #5a7184;
+    color: #705d66;
 }
 a:visited {
-    color: #705d66;
+    color: #a66;
 }
 a:focus {
     color: 	#b34747;
@@ -120,7 +137,8 @@ a:active {
 }
 
 section > p:first-of-type a::after {
-    content: url('../img/external-link.png');
-    width: 5px;
-    height: 5px;
+    content: "";
+    padding-right: 14px;
+    background: url('../img/external-link.png') no-repeat 100% 0;
+    background-size: 12px 12px;
 }
