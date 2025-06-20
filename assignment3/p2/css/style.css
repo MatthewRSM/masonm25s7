@@ -3,3 +3,38 @@ html {
 }
 
 /* Your CSS below here */
+div {
+    /* dimensions */
+    width: 200px;
+    height: 150px;
+
+    /* centering */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* I found an good-looking number between the values of 17-18, 
+       given that 16px = 1em **/
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px black;
+    color: #eeeeee;
+
+    /* border */
+    border: 1px solid rgb(141, 26, 26);
+    border-radius: 0.6rem;
+
+    /* gradient */
+    background: linear-gradient(to top left, rgb(0,0,0,0) 0%,
+                                            rgb(0,0,0,0.2) 30%,
+                                            rgb(0,0,0,0.2) 100%);
+
+    /* background colour */
+    background-color: rgb(254, 17, 17);
+
+    /* box shadows */
+    box-shadow: 2px 2px 4px black, 
+                inset -2px -2px 4px rgb(42, 22, 22),
+                inset 1px 1px 4px white;
+
+}
