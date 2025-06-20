@@ -97,6 +97,10 @@ section > h2 + p {
     text-indent: 20px;
 }
 
+a {
+    outline: none;
+}
+
 a:link {
     color: #5a7184;
 }
@@ -111,7 +115,12 @@ a:hover {
     color: 	#a68a55;
     text-decoration: none;
 }
+a:active {
+    color:#5da187
+}
 
-a {
-    outline: none;
+section > p:first-of-type a::after {
+    content: url('../img/external-link.png');
+    width: 5px;
+    height: 5px;
 }
