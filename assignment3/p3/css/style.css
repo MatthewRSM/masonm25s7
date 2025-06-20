@@ -88,10 +88,6 @@ nav li {
     border: 1px solid #a66;
 }
 
-nav li:hover {
-    border: 1px solid #a68a55;
-}
-
 nav li a {
     text-decoration: none;
 }
@@ -124,16 +120,29 @@ a:link {
 a:visited {
     color: #a66;
 }
+
 a:focus {
-    color: 	#b34747;
+    color: 	#ee3838;
     text-decoration: none;
 }
+/* couldn't get focus working for the nav list, well it works but the border wont change because im assuming without javascript you can change the parent element when the child element is the focus*/
+/* the nav link borders change for every other function except focus :( */
+
 a:hover {
     color: 	#a68a55;
     text-decoration: none;
 }
+nav li:hover {
+    color: 	#a68a55;
+    border: 1px solid #a68a55;
+}
+
 a:active {
-    color:#5da187
+    color:#5da187;
+}
+nav li:active {
+    color:#5da187;
+    border: 1px solid #5da187;
 }
 
 section > p:first-of-type a::after {
