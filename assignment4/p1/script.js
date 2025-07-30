@@ -1,5 +1,4 @@
 // 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
-
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
@@ -22,17 +21,32 @@ randomize.addEventListener('click', result);
 
 function result() {
 
+    // Randomly pick an option from each array
+    let newStory = storyText;
+    const xItem = randomValueFromArray(insertX);
+    const yItem = randomValueFromArray(insertY);
+    const zItem = randomValueFromArray(insertZ);
+
+    // Replace the placeholders with new content
+    newStory = newStory.replaceAll(":insertx:", xItem);
+    newStory = newStory.replaceAll(":inserty:", yItem);
+    newStory = newStory.replaceAll(":insertz:", zItem);
+
     if(customName.value !== '') {
         const name = customName.value;
-
+        // Replace all instances of Bob with the custom name
+        newStory = newStory.replaceAll("Bob", name);
     }
 
     if(document.getElementById("uk").checked) {
-        const weight = Math.round(300);
-        const temperature =  Math.round(94);
-
+        // Converts US to UK metrics
+        const weight = Math.round(300 / 14) + " stone";
+        const temperature =  Math.round((94 - 32) * 5 / 9) + " centigrade";
+        // Replaces them in story
+        newStory = newStory.replaceAll("300 pounds", weight);
+        newStory = newStory.replaceAll("94 fahrenheit", temperature);
     }
 
-    story.textContent = ;
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
