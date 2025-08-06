@@ -16,8 +16,21 @@ showHideBtn.onclick = function() {
   }
 };
 
-// functionality for adding a new comment via the comments form
+// Added a keydown EventListener to allow the Enter Key to open the Comment Section
+showHideBtn.addEventListener("keydown", function(e) {
+  if (e.key === 'Enter') { 
+    let showHideText = showHideBtn.textContent;
+    if(showHideText === 'Show comments') {
+      showHideBtn.textContent = 'Hide comments';
+      commentWrapper.style.display = 'block';
+    } else {
+      showHideBtn.textContent = 'Show comments';
+      commentWrapper.style.display = 'none';
+    }
+  }
+});
 
+// functionality for adding a new comment via the comments form
 const form = document.querySelector('.comment-form');
 const nameField = document.querySelector('#name');
 const commentField = document.querySelector('#comment');
